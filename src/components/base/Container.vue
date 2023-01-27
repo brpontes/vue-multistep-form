@@ -8,13 +8,6 @@
 
 <style lang="scss">
 .container {
-  margin: 5% auto;
-  max-width: 90%;
-  width: 1200px;
-  background-color: var(--white);
-  padding: 10px;
-  border-radius: 10px;
-  display: flex;
-  gap: 1rem;
+  @apply flex gap-4 mt-5 mx-auto p-2.5 w-[1200px] max-w-7xl rounded-[10px] bg-white;
 }
 </style>
