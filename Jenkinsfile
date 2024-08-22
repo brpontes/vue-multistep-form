@@ -1,9 +1,11 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:20.17.0-alpine3.20' }
+    }
     stages {
-        stage('Running') {
+        stage('Test') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                sh 'node --version'
             }
         }
     }
