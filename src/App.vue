@@ -18,8 +18,17 @@ const steps = shallowRef([
 
 const currentActiveStep = computed(() => {
   const [currentStep] = steps.value.filter((step) => step.active);
-  return currentStep.component;
+  return currentStep;
 });
+
+const updateStep = (action) => {
+  const step =
+    action === "next"
+      ? currentActiveStep?.value?.step + 1
+      : currentActiveStep?.value?.step - 1;
+
+  setCurrentActiveStep({ step });
+};
 
 const setCurrentActiveStep = (currentStep) => {
   steps.value = steps.value.map((step) => ({
@@ -32,6 +41,10 @@ const setCurrentActiveStep = (currentStep) => {
 <template>
   <Container>
     <Wizard :steps="steps" @update:current-step="setCurrentActiveStep" />
-    <Form :current-step="currentActiveStep" />
+    <Form
+      :current-step="currentActiveStep"
+      @next-step="updateStep('next')"
+      @prev-step="updateStep('prev')"
+    />
   </Container>
 </template>

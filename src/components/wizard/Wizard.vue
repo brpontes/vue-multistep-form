@@ -22,7 +22,6 @@ const handleEmitCurrentStep = (step) => {
     :style="{
       backgroundImage: `url(${BgWizardDesktop})`,
       backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
     }"
   >
     <ul class="wizard-steps">
@@ -38,7 +37,7 @@ const handleEmitCurrentStep = (step) => {
 
 <style lang="scss" scoped>
 .wizard {
-  width: 280px;
+  min-width: 280px;
   height: 578px;
 
   &-steps {

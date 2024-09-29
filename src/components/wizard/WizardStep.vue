@@ -40,13 +40,17 @@ defineProps({
 .wizard-step-item {
   display: flex;
   gap: 1rem;
+  margin-left: 2rem;
   margin-bottom: 30px;
   cursor: pointer;
 
   &__step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     color: var(--white);
-    padding: 10px 15px;
+    padding: 5px 15px;
     border: 1px solid var(--white);
     border-radius: 100%;
     transition: .2s all ease-out;
@@ -62,10 +66,9 @@ defineProps({
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    gap: 8px;
 
     &--step {
-      color: var(--cool-gray);
+      color: var(--light-gray);
       font-weight: 400;
       font-size: 13px;
     }

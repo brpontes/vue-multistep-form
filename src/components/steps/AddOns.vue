@@ -1,5 +1,12 @@
 <script setup>
 import Header from "../base/Header.vue";
+
+const props = defineProps({
+  form: {
+    type: Object,
+    default: () => ({}),
+  },
+});
 </script>
 
 <template>

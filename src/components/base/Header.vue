@@ -22,8 +22,6 @@ defineProps({
 
 <style lang="scss">
 .header {
-  margin: 40px 4rem 10px;
-
   &__title {
     font-size: 32px;
     font-weight: 700;
