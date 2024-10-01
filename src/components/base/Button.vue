@@ -37,6 +37,8 @@ const onClick = (event) => {
   color: var(--white);
   padding: 12px 20px;
   border-radius: 0.5rem;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
   cursor: pointer;
 
   &-primary {

@@ -38,9 +38,11 @@ defineEmits(["update:modelValue", "input"]);
   border: 1px solid var(--light-gray);
   outline: none;
   padding: 0 1rem;
-  font-weight: 500;
   border-radius: 0.5rem;
   height: 50px;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+  color: var(--marine-blue);
 
   &:focus {
     border: 1px solid var(--purplish-blue);
