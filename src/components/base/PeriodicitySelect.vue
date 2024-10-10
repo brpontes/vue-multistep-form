@@ -15,13 +15,13 @@ const updatePeriodicity = (periodicity) =>
 <template>
   <section class="periodicity">
     <span
-      :class="periodicity === 'monthly' ? 'periodicity--ativo' : null"
+      :class="periodicity === 'monthly' ? 'periodicity--active' : null"
       @click.native="updatePeriodicity('monthly')"
     >
       Monthly
     </span>
     <span
-      :class="periodicity === 'yearly' ? 'periodicity--ativo' : null"
+      :class="periodicity === 'yearly' ? 'periodicity--active' : null"
       @click.native="updatePeriodicity('yearly')"
     >
       Yearly
@@ -43,7 +43,7 @@ const updatePeriodicity = (periodicity) =>
     color: var(--cool-gray);
     font-weight: 500;
 
-    &.periodicity--ativo {
+    &.periodicity--active {
       color: var(--marine-blue);    
     }
   }

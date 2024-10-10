@@ -22,11 +22,16 @@ const planValue = computed(() => {
 
 <template>
   <div class="selectable-card">
-    <img :src="`./src/assets/icon-${plan.plan}.svg`" />
+    <img
+      :src="`./src/assets/icon-${plan.plan}.svg`"
+      :alt="`icon-${plan.plan}`"
+      :title="`icon-${plan.plan}`"
+      width="50"
+    />
 
-    <div class="plan-details">
-      <span>{{ plan.plan }}</span>
-      <span class="plan-details__value">{{ planValue }}</span>
+    <div class="selectable-card__details">
+      <span class="selectable-card__details--plan">{{ plan.plan }}</span>
+      <span class="selectable-card__details--value">{{ planValue }}</span>
       <span v-if="periodicity === 'yearly'">2 months free</span>
     </div>
   </div>
@@ -34,20 +39,27 @@ const planValue = computed(() => {
 
 <style lang="scss" scoped>
 .selectable-card {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 1rem;
   background-color: var(--white);
   border: 1px solid var(--marine-blue);
   border-radius: 10px;
 
-  .plan-details {
+  &__details {
     display: flex;
     flex-direction: column;
+    gap: 6px;
 
-    :first-child {
+    &--plan {
+      color: var(--marine-blue);
+      font-weight: 500;
       text-transform: capitalize;
     }
 
-    &__value {
+    &--value {
       color: var(--cool-gray);
       font-size: 14px;
     }
